@@ -5,124 +5,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Bricolage+Grotesque:opsz@10..48&family=Mukta:wght@500&family=Nunito:ital@1&family=PT+Serif:ital@1&family=REM:wght@100&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="phone.css">
 </head>
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-    }
-    #first{
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        align-items: center;
-        background-color: rgb(48 93 210);
-        color: white;
-    }
-
-    #first nav {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-evenly;
-        align-items: center;
-    }
-
-    nav img {
-        border: 1px solid black;
-        height: 20px;
-        width: 20px;
-        border-radius: 50%;
-    }
-
-    nav ul {
-        display: flex;
-        flex-flow: row wrap;
-    }
-
-    nav ul li {
-        list-style: none;
-        padding: 25px 30px;
-    }
-    
-
-    nav ul li a {
-        text-decoration: none;
-    }
-
-    #first div{
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        align-items: center;
-        height: 40vh;
-    }
-    #first h2{
-        margin: 20px 0px;
-    }
-
-    #sec{
-        display: flex;
-        margin-top: 30px;
-    }
-    #sec div{
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        align-items: center;
-    }
-    #sec h4{
-        margin: 20px 0px;
-    }
-    #sec div img{
-        height: 150px;
-        width: 150px;
-        border: 1px solid black;
-        border-radius: 50%;
-    }
-
 </style>
 
 <body>
     <section id="first">
 
         <nav>
-            <img src="" alt="">
+            <img src="LegalLogo.jpg" alt="">
             <ul>
-                <li><a>Home</a></li>
-                <li><a>Comapny</a></li>
-                <li><a>Blog</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
-            <button>Sign In</button>
         </nav>
+        <hr>
         <div>
             <h1>Know what you Sign In</h1>
-            <h2>automated Legal analysis, for everyone</h2>
-            <button>Coming soon</button>
+            <h3>automated Legal analysis, for everyone</h3>
+            <button>Coming soon <span class="right-arrow"></span></button>
+
         </div>
     </section>
 
     <section id="sec">
         <div>
-            <img src="" alt="">
-            <h4>Hello</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, amet! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, facere.</p>
+            <img src="LS.png" alt="">
+            <h4>Legal Simplifier</h4>
+            <p>Effortless legal drafting: AI-powered document in ease language</p>
         </div>
         <div>
-            <img src="" alt="">S
-            <h4>Hello</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, amet! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, facere.</p>
+            <img src="CD.png" alt="">
+            <h4>Custom drafting</h4>
+            <p>Ability to customize legal documents based on specific need of user </p>
         </div>
         <div>
-            <img src="" alt="">
-            <h4>Hello</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, amet! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, facere.</p>
+            <img src="SI.png" alt="">
+            <h4>Seamless integration</h4>
+            <p>Integration with existing legal resources and datbases to ensure accuracy and completeness of legal
+                document</p>
         </div>
         <div>
-            <img src="" alt="">
-            <h4>Hello</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, amet! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, facere.</p>
+            <img src="EC.png" alt="">
+            <h4>Expert consultation</h4>
+            <p>Option for users to seek legal advice from an expert in case of complex legal issues</p>
         </div>
     </section>
+    <footer>   Copyright &copy; www.LegalEaseAI.com  |  All rights reserved!</footer>
 </body>
 
 </html>
