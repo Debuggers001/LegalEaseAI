@@ -2,9 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 body{
     font-family: 'Poppins', sans-serif;
+    background-color: #3d4a94;
+    background-image: linear-gradient(rgba(29, 48, 109, 0),rgba(137, 198, 248, 0.8))
 }
 nav{
     display: flex;
@@ -15,8 +18,7 @@ nav{
     text-align: center;
     font-family: 'Poppins', sans-serif;
     color: white;
-
-}
+    position: sticky;}
 ul{
     display: flex;
     width: 80%;
@@ -27,6 +29,9 @@ ul{
 li{
     padding: 10px;
     text-align: center;
+}
+li:hover{
+    transform: scale(1.2);
 }
 a{
     text-decoration: none;
@@ -42,10 +47,16 @@ button{
     color: white;
     transition: all 0.5s ease;
     cursor: pointer;
+    border-radius: 15px;
+}
+button:hover{
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.6);
 }
 #main{
     text-align: center;
-    background-color: lightblue;
     padding: 200px;
     font-size: 30px;
 }
@@ -60,4 +71,32 @@ button{
     height: 50%;
     background: transparent;
     color: black;
+}
+#come:hover{
+    background-color: black;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.6);
+}
+#cards{
+    display: flex;
+    float: left;
+    clear: both;
+    color: black;
+}
+.card{
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 15px;
+    z-index: 10px;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.2);
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+}
+.card:hover{
+    transform: scale(1.1);
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.6);
 }
