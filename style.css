@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 body{
     font-family: 'Poppins', sans-serif;
@@ -89,11 +88,14 @@ button:hover{
 }
 #cards{
     display: flex;
-    float: left;
-    clear: both;
+    /* float: left; */
+    /* clear: both; */
+    justify-content: center;
+    align-items: center;
     color: black;
 }
 .card{
+    height: 250px;
     margin: 20px;
     padding: 20px;
     border: 1px solid black;
@@ -107,6 +109,7 @@ button:hover{
     width: 330px;
     text-align: center;
     align-items: center;
+
 }
 .card:hover{
     transform: scale(1.1);
@@ -126,7 +129,7 @@ img{
 .body{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start1;
     align-items: center;
     text-align: center;
     font-family: Helvetica, sans-serif;
@@ -141,6 +144,15 @@ img{
     color: black;
     text-decoration: underline;
     margin: 10px;
+    font-size: 20px;
+}
+#contact h3{
+    color: black;
+    text-decoration: underline;
+    margin: 10px;
+    font-size: 20px;
+    text-align: left;
+    display: block;
 }
 .body h1{
     color: black;
@@ -150,6 +162,7 @@ img{
 }
 .body p{
     font-size: 18px;
+    text-align: left;
 }
 .body div{
     margin: 20px;
@@ -167,7 +180,7 @@ img{
 }
 .exist{
     width: 28%;
-    height: 350px;
+    height: 400px;
     background-color: white;
     padding: 10px;
     border-radius: 5%;
@@ -183,5 +196,77 @@ img{
     margin: 20px;
     text-align: center;
     font-size: 50px;
+}
+.invision{
+    text-align: left;
+}
+.upperbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contact h3{
+    width: 100%;
+    text-align: left;
+    padding-left: 10px;
+}
+#contact p{
+    width: 100%;
+    text-align: left;
+    padding-left: 30px;
+}
+#log{
+    background: url("login\ page.jpg") no-repeat center center/cover;
+    position: absolute;
+    height: 110vh;
+    width: 100vw;
+    top: 100px;
+    left: 0;
+}
+#log form{
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+#log h1{
+    text-align: center;
+    padding: 10px;
+}
+#log input{
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 10px 20px;
+}
+
+form button{
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+input, button{
+    width: 80%;
+}
+#cards a{
+    text-decoration: none;
+    color: black;
+}
+#sign{
+    width: 150px;
 }
 
