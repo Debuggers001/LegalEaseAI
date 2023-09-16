@@ -1,14 +1,16 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-body{
     font-family: 'Poppins', sans-serif;
-    background-color: #48bfa3;
-    background-image: linear-gradient(rgba(29, 48, 109, 0),rgba(137, 198, 248, 0.8))
 }
-nav{
+
+body {
+    /* background-color: #48bfa3; */
+    background-image: linear-gradient(rgba(29, 48, 109, 0), rgb(0 141 255))
+}
+/* rgba(137, 198, 248, 0.8) */
+nav {
     width: 100%;
     display: flex;
     align-items: center;
@@ -18,30 +20,32 @@ nav{
     text-align: center;
     font-family: 'Poppins', sans-serif;
     color: white;
-    /* position: fixed;
-    top: 0;
-    /* left: 0; */
 }
-ul{
+
+ul {
     display: flex;
     width: 80%;
     list-style: none;
     padding: 10px;
     justify-content: center;
 }
-li{
+
+li {
     padding: 10px;
     text-align: center;
 }
-li:hover{
+
+li:hover {
     transform: scale(1.2);
 }
-a{
+
+a {
     text-decoration: none;
     color: white;
-    padding: 10px;
+    margin: 10px;
 }
-button{
+
+button {
     font-family: 'Poppins', sans-serif;
     padding: 10px 20px;
     font-size: 15px;
@@ -52,26 +56,35 @@ button{
     cursor: pointer;
     border-radius: 15px;
 }
-button:hover{
+
+button:hover {
     background-color: white;
     color: black;
     transform: scale(1.1);
-    box-shadow: 10px 10px 10px rgba(0,0,0,0.6);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
 }
-#main{
-    height: 90vh;
+
+#main {
+    height: 44vh;
     text-align: center;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
     font-size: 30px;
-    
+
 }
-#main h3{
-    margin: 20px;
+
+#main h1 {
+    font-size: 55px;
 }
-#come{
+
+#main h3 {
+    margin: 15px;
+    font-size: 25px;
+}
+
+#come {
     padding: 10px;
     border: 2px solid black;
     border-radius: 15px;
@@ -80,28 +93,30 @@ button:hover{
     background: transparent;
     color: black;
 }
-#come:hover{
+
+#come:hover {
     background-color: black;
     color: white;
     transform: scale(1.1);
-    box-shadow: 7px 6px 10px rgba(0,0,0,0.7);
+    box-shadow: 7px 6px 10px rgba(0, 0, 0, 0.7);
 }
-#cards{
+
+#cards {
     display: flex;
-    /* float: left; */
-    /* clear: both; */
     justify-content: center;
     align-items: center;
     color: black;
+    margin-top: 20px;
 }
-.card{
+
+.card {
     height: 250px;
-    margin: 20px;
+    /* margin: 20px; */
     padding: 20px;
     border: 1px solid black;
     border-radius: 15px;
     z-index: 10px;
-    box-shadow: 10px 10px 10px rgba(0,0,0,0.2);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
     transition: all 0.5s ease;
     display: flex;
     flex-direction: column;
@@ -109,24 +124,28 @@ button:hover{
     width: 330px;
     text-align: center;
     align-items: center;
+    box-shadow: 5px 5px 10px 0px black;
+}
 
-}
-.card:hover{
+.card:hover {
     transform: scale(1.1);
-    box-shadow: 10px 10px 10px rgba(0,0,0,0.6);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
 }
-img{
+
+img {
     border-radius: 50%;
     width: 100px;
     height: 100px;
     /* border: 2px solid black; */
 }
-#logo{
+
+#logo {
     width: 140px;
     height: 100px;
     border-radius: 5%;
 }
-.body{
+
+.body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start1;
@@ -135,18 +154,21 @@ img{
     font-family: Helvetica, sans-serif;
     color: black;
 }
-.body h2{
+
+.body h2 {
     color: black;
-    text-decoration:underline;
+    text-decoration: underline;
     margin: 20px;
 }
-.body h4{
+
+.body h4 {
     color: black;
     text-decoration: underline;
     margin: 10px;
     font-size: 20px;
 }
-#contact h3{
+
+#contact h3 {
     color: black;
     text-decoration: underline;
     margin: 10px;
@@ -154,68 +176,83 @@ img{
     text-align: left;
     display: block;
 }
-.body h1{
+
+.body h1 {
     color: black;
     text-decoration: underline;
     margin: 20px;
     font-size: 35px;
 }
-.body p{
+
+.body p {
     font-size: 18px;
     text-align: left;
 }
-.body div{
+
+.body div {
     margin: 20px;
     text-align: center;
 }
-#about{
+
+#about {
     width: 100%;
     height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 0%; 
+    border-radius: 0%;
 
 }
-.exist{
+
+.exist {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
     width: 28%;
     height: 400px;
     background-color: white;
     padding: 10px;
     border-radius: 5%;
     box-sizing: border-box;
-    box-shadow: 10px 10px 10px rgba(0,0,0,0.6);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.6);
     color: black;
-    display: inline-block;
+    /* display: inline-block; */
 }
-.exist:hover{
+
+.exist:hover {
     transform: scale(1.1);
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.6);
 }
-#abus h2{
-    margin: 20px;
-    text-align: center;
-    font-size: 50px;
+
+.exist1{
+    height: 320px;
 }
-.invision{
+
+.invision {
     text-align: left;
 }
-.upperbox{
+
+.upperbox {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#contact h3{
+
+#contact h3 {
     width: 100%;
     text-align: left;
     padding-left: 10px;
 }
-#contact p{
+
+#contact p {
     width: 100%;
     text-align: left;
     padding-left: 30px;
 }
-#log{
+
+#log {
     background: url("login\ page.jpg") no-repeat center center/cover;
     position: absolute;
     height: 110vh;
@@ -223,7 +260,8 @@ img{
     top: 100px;
     left: 0;
 }
-#log form{
+
+#log form {
     height: 400px;
     width: 400px;
     position: absolute;
@@ -236,18 +274,20 @@ img{
     justify-content: center;
     align-items: center;
 }
-#log h1{
+
+#log h1 {
     text-align: center;
     padding: 10px;
 }
-#log input{
+
+#log input {
     margin: 10px;
     border-radius: 5px;
     border: 1px solid black;
     padding: 10px 20px;
 }
 
-form button{
+form button {
     margin: 10px;
     border-radius: 5px;
     border: 1px solid black;
@@ -259,14 +299,32 @@ form button{
     cursor: pointer;
 }
 
-input, button{
+input,
+button {
     width: 80%;
 }
-#cards a{
+
+#cards a {
     text-decoration: none;
     color: black;
 }
-#sign{
+
+#sign {
     width: 150px;
 }
 
+#abus{
+    background: url(about-img.jpg) no-repeat center center/cover;
+    height: 60vh;
+    width: 100%;
+    margin: 0;
+    box-shadow: -10px 10px 20px 0px black;
+}
+
+#abus p{
+    width: 50%;
+    padding: 81px 30px;
+    font-size: 22px;
+    line-height: 40px;
+    text-shadow: 3px 3px 4px white;
+}
