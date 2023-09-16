@@ -14,8 +14,10 @@ def index():
         query = request.form["query"]
         names = request.form["names"]
         age = request.form["age"]
-        with open("data.txt", "a", encoding="utf-8") as f:
-            f.writelines(str(query)+"\n"+str(names)+"\n"+str(age)+"\n"+str(datetime.datetime.now())+"\n")
+        address=request.form["address"]
+        with open("data.txt", "w", encoding="utf-8") as f:
+            f.writelines("i want to file a case so create a draft application for me in totally legal format and also mention the IPC section and every analysis of the case, also mention the details i am giving to you, and don't mention anything about police station, here are the details:")
+            f.writelines("what happened with me:"+str(query)+"\n"+"my name:"+str(names)+"\n"+"my age:"+str(age)+"\n"+"date and time on which it happened :"+str(datetime.datetime.now())+"\n"+"your address:"+str(address))
         with open("data.txt", "r", encoding="utf-8") as f:
             R=f.read()
         R_variable=R
@@ -31,5 +33,3 @@ def index():
 
 if __name__ == "__main__":
     app.run(debug=True)
-
-
