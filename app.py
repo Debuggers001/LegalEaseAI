@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 from bardapi import BardCookies
 import datetime
+import re
 EXPLAIN_TEMPLATE_LOADING = True
 app = Flask(__name__)
 Cookies_dict={
@@ -11,20 +12,40 @@ Cookies_dict={
 def index():
     Reply = None
     if request.method == "POST":
-        query = request.form["query"]
         names = request.form["names"]
         age = request.form["age"]
-        address=request.form["address"]
+        query = request.form["query"]
+        
         with open("data.txt", "w", encoding="utf-8") as f:
-            f.writelines("i want to file a case so create a draft application for me in totally legal format and also mention the IPC section and every analysis of the case, also mention the details i am giving to you, and don't mention anything about police station, here are the details:")
-            f.writelines("what happened with me:"+str(query)+"\n"+"my name:"+str(names)+"\n"+"my age:"+str(age)+"\n"+"date and time on which it happened :"+str(datetime.datetime.now())+"\n"+"your address:"+str(address))
+            f.writelines("i want to file a case so create a draft application for me in totally legal format and also mention the IPC section and every analysis of the case, also mention the details i am giving to you, and don't mention anything about police station, here are the details:"+"\n")
+            f.writelines("my name:"+str(names)+"\n"+"my age:"+str(age)+"\n"+"what happened with me:"+str(query)+"\n"+"date and time on which it happened :"+str(datetime.date.today())+"\n")
         with open("data.txt", "r", encoding="utf-8") as f:
             R=f.read()
         R_variable=R
 
         Bard = BardCookies(cookie_dict=Cookies_dict)
         Reply = Bard.get_answer(R_variable)['content']
+        with open("data2.txt", "w", encoding="utf-8") as f:
+            f.writelines(Reply)
 
+        def remove_bold(text):
+            return re.sub(r'\**', '', text)
+
+        def main():
+        
+            with open('data2.txt', 'r') as f:
+                text = f.read()
+
+            text = remove_bold(text)
+
+            with open('data3.txt', 'w') as f:
+                f.write(text)
+        main()
+        with open("data3.txt", "r", encoding="utf-8") as f:
+            read=f.read()
+        with open("draft.html", "w", encoding="utf-8") as f:
+            f.writelines(read)
+        
         
         return render_template("bard.html", reply=Reply)
     else:

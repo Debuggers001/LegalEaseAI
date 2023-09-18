@@ -1,17 +1,125 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Bard Web App</title>
+    <title>Legal Simplifier</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body{
+            background-color: wheat;
+        }
+        nav {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            min-height: 15vh;
+            background-color: black;
+            justify-content: center;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+        }
+
+        ul {
+            display: flex;
+            width: 80%;
+            list-style: none;
+            padding: 10px;
+            justify-content: center;
+        }
+
+        li {
+            padding: 5px 25px;
+            text-align: center;
+        }
+
+        li:hover {
+            transform: scale(1.2);
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            margin: 10px;
+        }
+        section{
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            height: 70vh;
+            width: 30%;
+            border: 2px solid black;
+            border-radius: 30px;
+            background-color: white;
+            padding: 30px;
+        }
+        section h1{
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        form{
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        form input, button{
+            padding: 10px 20px;
+            margin: 16px 0px;
+        }
+        #draft{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 20%;
+            right: 10%;
+            height: 70vh;
+            width: 45%;
+            background-color: white;
+            border: 2px solid black;
+            padding: 25px;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Bard Web App</h1>
-    <form action="/" method="POST">
-        <input type="text" name="query" placeholder="Enter your query">
-        <input type="text" name="names" placeholder="Enter your name">
-        <input type="text" name="age" placeholder="Enter your age">
-        <input type="text" name="address" placeholder="Enter your address">
-        <input type="submit" value="Submit">
-    </form>
-    <p>{{ reply }}</p>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <section>
+        <h1>Bard Web App</h1>
+        <form action="/" method="POST">
+            <input type="text" name="names" placeholder="Enter your name">
+            <div>
+                <span>Gender:</span>&nbsp;&nbsp;&nbsp;
+                Male <input type="radio" name="gender">
+                Female <input type="radio" name="gender">
+            </div>
+            <input type="text" name="age" placeholder="Enter your age">
+            <input type="text" name="query" placeholder="Enter your query">
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+    <div id="draft">
+        
+    </div>
+    <script src="data3.js"> 
+    </script>
 </body>
+
 </html>
