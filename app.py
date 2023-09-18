@@ -4,13 +4,14 @@ import datetime
 import re
 EXPLAIN_TEMPLATE_LOADING = True
 app = Flask(__name__)
+else_conditon="Page Not Found"
 Cookies_dict={
     "__Secure-1PSIDTS":"sidts-CjEBSAxbGakPKKcI2BxTP6-cKRaShb7fo3HoFXAjdipsR3SoXQT0aSMnOOaEFO6mBdGzEAA",
     "__Secure-1PSID" :"aQjWW1l3CsGHJp9tCROZwwlPadlcFbTB9M81a67mlyRHgECMnZbflncraaEB6LInyHhxLw.",
     "__Secure-1PSIDCC" : "APoG2W_pH-vzg_nR6r9bkv8Zn5u1YAUxaeEn84JfGuDIVfKJLvQc24gOfaazydiF-RR0l42O14Cs" }
 @app.route("/", methods=["GET", "POST"])
 def index():
-    Reply = None
+    Reply = ""
     if request.method == "POST":
         names = request.form["names"]
         age = request.form["age"]
@@ -48,7 +49,8 @@ def index():
          #    f.writelines(read)
         
         
-        return render_template("bard.html", reply=read)
+        return render_template("draft.html", reply=read)
+    
     else:
         return render_template("bard.html", reply=Reply)
         
