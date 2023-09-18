@@ -42,12 +42,13 @@ def index():
                 f.write(text)
         main()
         with open("data3.txt", "r", encoding="utf-8") as f:
+
             read=f.read()
-        with open("draft.html", "w", encoding="utf-8") as f:
-            f.writelines(read)
+        #with open("draft.html", "w", encoding="utf-8") as f:
+         #    f.writelines(read)
         
         
-        return render_template("bard.html", reply=Reply)
+        return render_template("bard.html", reply=read)
     else:
         return render_template("bard.html", reply=Reply)
         
