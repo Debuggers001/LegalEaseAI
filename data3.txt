@@ -1,51 +1,54 @@
-DRAFT APPLICATION
+IN THE COURT OF
+METROPOLITAN MAGISTRATE
+MEERUT
 
-To,
-The Hon'ble Magistrate,
-[Court Name]
+APPLICATION FOR FILING CASE
 
-Subject: Application for filing a case of assault under Section 352 of the Indian Penal Code, 1860
+Case Type: Public Nuisance
 
-Applicant:
-Parth
+IPC Section: 268
+
+Applicant: Parth
+Gender: Male
 Age: 55
-Address:
+Address: Football Chawk, Meerut
 
-Respondent:
-Deepanshu
-Address:
+Respondent: Unknown
 
-Application:
+Date of Incident: 2023-09-05
+Time of Incident: 02:24
+Place of Incident: Football Chawk, Meerut
 
-The applicant, Parth, respectfully submits that on 2023-09-18, the respondent, Deepanshu, slapped him in the face. The incident took place at [location] at [time]. The applicant has no prior enmity with the respondent and the motive for the assault is unknown to him.
+Facts of the Case:
 
-The applicant has suffered physical and mental pain and anguish as a result of the assault. He has also incurred medical expenses.
+On 2023-09-05 at 02:24, the Respondent, an unknown person, played loud music at Football Chawk, Meerut. The loud music disturbed the peace and tranquility of the neighborhood, making it difficult for the Applicant and other residents to sleep.
 
-The applicant has attached a medical certificate to this application as evidence of his injuries.
+The Applicant requested the Respondent to turn down the music, but the Respondent refused. The Applicant then tried to call the police, but he was unable to reach them.
 
-The applicant prays that the Hon'ble Court may be pleased to:
+The Respondent continued to play loud music for several hours, until the Applicant and other residents were forced to leave their homes.
 
- Take cognizance of the offence under Section 352 of the Indian Penal Code, 1860;
- Issue summons to the respondent to appear before the Hon'ble Court;
- Direct the respondent to pay compensation to the applicant for the physical and mental pain and anguish suffered by him, as well as the medical expenses incurred by him;
- Pass such other order or orders as the Hon'ble Court may deem fit and proper.
+Grounds of Relief:
 
-Analysis of the Case:
+The Applicant is aggrieved by the Respondent's actions, which amount to public nuisance under Section 268 of the Indian Penal Code.
 
-Section 352 of the Indian Penal Code, 1860 deals with the offence of assault. It states that whoever assaults or uses criminal force to any person, otherwise than on grave and sudden provocation, shall be punished with imprisonment of either description for a term which may extend to three months, or with fine, or with both.
+The Applicant prays that the Hon'ble Court may be pleased to:
 
-In the present case, the applicant has alleged that the respondent slapped him in the face. This constitutes an assault under Section 352 of the Indian Penal Code, 1860.
+ Take cognizance of the offense and issue summons to the Respondent.
+ Convict the Respondent of the offense of public nuisance under Section 268 of the Indian Penal Code.
+ Punish the Respondent in accordance with law.
 
-The applicant has also attached a medical certificate to his application as evidence of his injuries. This further strengthens his case.
+Prayer:
 
-Conclusion:
+The Applicant therefore prays that the Hon'ble Court may be pleased to grant him the reliefs prayed for above.
 
-The applicant has a strong case against the respondent. The Hon'ble Court is requested to take cognizance of the offence and issue summons to the respondent to appear before the Court. The Court is also requested to direct the respondent to pay compensation to the applicant for the physical and mental pain and anguish suffered by him, as well as the medical expenses incurred by him.
+Dated: 2023-09-21
 
-Dated: 2023-09-18
+Place: Meerut
 
-Signature of the Applicant
+Parth
 
-[Name]
+Applicant
 
-[Address]
+Witnesses: None
+
+Evidence: None

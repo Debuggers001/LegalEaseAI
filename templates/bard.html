@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Legal Simplifier</title>
+    <title>Legal Draft Generator</title>
     <style>
         * {
             margin: 0;
@@ -11,9 +11,14 @@
             font-family: 'Poppins', sans-serif;
         }
 
-        body{
+        body {
             background-color: wheat;
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            justify-content: center;
         }
+
         nav {
             width: 100%;
             display: flex;
@@ -48,51 +53,116 @@
             color: white;
             margin: 10px;
         }
-        section{
+
+        section {
             display: flex;
             flex-flow: column wrap;
             justify-content: center;
             align-items: center;
-            position: absolute;
-            top: 20%;
-            left: 10%;
-            height: 70vh;
-            width: 30%;
+            margin: 20px 0px;
+            height: auto;
+            width: 80%;
             border: 2px solid black;
-            border-radius: 30px;
+            /* border-radius: 30px; */
             background-color: white;
             padding: 30px;
         }
-        section h1{
+
+        section h1 {
             font-size: 48px;
             margin-bottom: 10px;
         }
-        form{
+
+        form {
             display: flex;
             flex-flow: column wrap;
             justify-content: center;
-            align-items: center;
+            /* align-items: center; */
+            width: 80%;
         }
-        form input, button{
-            padding: 10px 20px;
-            margin: 16px 0px;
+
+        form div {
+            display: inline-block;
         }
-        #draft{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-            top: 18%;
-            right: 2%;
-            height: 70vh;
-            width: 52%;
-            background-color: white;
+
+        form div span {
+            margin-right: 80px;
+        }
+
+        input {
+            width: 50%;
+            display: inline-block;
+            margin: 30px 30px;
+        }
+
+        form input,
+        textarea {
             border: 2px solid black;
-            padding: 25px;
+            padding: 10px 30px;
+            border-radius: 10px;
         }
-        pre{
-            font-size: 10px;
-            
+
+        input[type="radio"] {
+            width: auto;
+            margin: 20px 80px;
+            margin-left: 0;
+        }
+
+        input[type="submit"] {
+            cursor: pointer;
+            width: 20%;
+            background-color: #f5deb3bf;
+            float: right;
+            font-weight: bold;
+        }
+
+        input[type="date"],
+        input[type="time"],
+        #age {
+            width: 20%;
+        }
+
+        textarea {
+            height: 200px;
+            width: 70%;
+            margin: 0px 30px;
+        }
+
+        div:has(textarea) {
+            display: flex;
+            align-items: flex-start;
+            justify-self: center;
+            margin: 30px 0px;
+        }
+
+        @media (max-width: 768px) {
+
+            /* Make the navigation bar stack vertically */
+            nav ul {
+                flex-flow: column wrap;
+            }
+
+            /* Make the form elements stack vertically */
+            form div {
+                display: flex;
+                flex-flow: column wrap;
+                align-items: center;
+            }
+
+            /* Make the input fields full width */
+            input {
+                width: 100%;
+            }
+
+            /* Make the textarea full width */
+            textarea {
+                width: 100%;
+            }
+
+            /* Make the submit button full width */
+            input[type="submit"] {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -106,26 +176,76 @@
         </ul>
     </nav>
     <section>
-        <h1>Bard Web App</h1>
+        <h1>Legal Draft Generator</h1>
         <form action="/" method="POST">
-            <input type="text" name="names" placeholder="Enter your name">
             <div>
-                <span>Gender:</span>&nbsp;&nbsp;&nbsp;
-                Male <input type="radio" name="gender">
-                Female <input type="radio" name="gender">
+
+                Enter your name:<input type="text" name="names">
             </div>
-            <input type="text" name="age" placeholder="Enter your age">
-            <input type="text" name="query" placeholder="Enter your query">
-            <input type="submit" value="Submit">
+            <div>
+                <span>Gender:</span>
+                Male <input type="radio" name="gender" value="male">
+                Female <input type="radio" name="gender" value="female">
+            </div>
+            <div>
+                Enter your age:<input type="text" name="age" id="age">
+            </div>
+            <div>
+
+                Enter your query:<textarea name="query"></textarea>
+            </div>
+            <div>
+                Name of culprit:<input type="text" name="noc" value="Unknown">
+            </div>
+            <div>
+                Relation with culprit:<input type="text" name="rwc" value="Unknown">
+            </div>
+            <div>
+                Address of culprit:<input type="text" name="aoc" value="Unknown">
+            </div>
+            <div>
+                Enter date of incident:<input type="date" name="doi">
+            </div>
+            <div>
+                Enter time of incident:<input type="time" name="toi">
+            </div>
+            <div>
+                Enter place of incident:<input type="text" name="poi">
+            </div>
+            <div>
+                Enter your address:<input type="address" name="address">
+            </div>
+            <div>
+                Enter your city:<input type="address" name="city">
+            </div>
+            <div>
+                Enter your phone number:<input type="number" name="pn">
+            </div>
+            <div>
+                Enter your witnesses:<input type="text" name="witnesses" value="none">
+            </div>
+            <div>
+                Enter your evidence:<input type="text" name="evidence" value="none">
+            </div>
+            <div>
+                Enter your injuries:<input type="text" name="injuries" value="none">
+            </div>
+            <div>
+                Enter your losses:<input type="text" name="loss" value="none">
+            </div>
+            <div>
+                Drop your sign here:<input type="file" accept="image/*" name="sign" value="" id="imageInput">
+            </div>
+            <div>
+                <input type="submit">
+            </div>
         </form>
     </section>
- 
-    <div id="draft" >
-        <pre>
 
-            {{ reply }}
-        </pre>
-    </div>
 </body>
 
 </html>
+
+
+
+

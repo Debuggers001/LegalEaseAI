@@ -1,88 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        div{
-            width: 100%;
+        body {
+            background-color: #a9a9a6;
+            /* background: url(./grain.jpg) no-repeat center center/contain;
+            opacity: 2;
+            filter: contrast(2); */
+        }
+
+        div {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        pre {
+            width: 80vw;
+            white-space: pre-wrap;
+            overflow: hidden;
+            font-size: 16.5px;
+            text-overflow: ellipsis;
+        }
+
+        button {
+            align-self: flex-end;
+            padding: 10px 40px;
+            border-radius: 10px;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+
+        @media print {
+            #printButton {
+                display: none;
+            }
         }
     </style>
 </head>
+
 <body>
-       <div id="draft" >
-        <pre>
 
-            
-            DRAFT APPLICATION FOR FILING CASE OF ASSAULT
-
-To,
-
-The Honorable Magistrate,
-
-[Court Name]
-
-[City]
-
-Subject: Application for filing case of assault
-
-Respected Sir/Madam,
-
-I, Parth, aged 55, resident of [Address], do hereby submit this application for filing a case of assault against Deepanshu.
-
-On 2023-09-18, at [Time], I was walking on [Street Name] when Deepanshu suddenly approached me and slapped me on my face without any provocation. I was shocked and stunned by his sudden attack. I tried to reason with him, but he refused to listen and walked away.
-
-I suffered a great deal of humiliation and pain due to Deepanshu's assault. I also incurred medical expenses for getting my injuries treated.
-
-Deepanshu's act of assault is a clear violation of Section 351 of the Indian Penal Code, 1860 (IPC), which defines assault as follows:
-
-> Section 351 IPC: Whoever makes any gesture, or any preparation intended to cause any person to apprehend that he will commit an offence of violence upon him, or upon any other person in his presence, or upon any property in his possession, or under his charge, or in his sight, shall be said to assault that person.
-
-I pray to this Honorable Court to take cognizance of my complaint and direct the police to investigate the matter and file a charge sheet against Deepanshu for the offence of assault under Section 351 IPC.
-
-I am attaching a copy of the medical certificate issued to me by the doctor who treated my injuries.
-
-Thanking you,
-
-Yours sincerely,
-
-Parth
-
-IPC Section and Analysis of the Case
-
-Section 351 of the IPC defines assault as follows:
-
-> Section 351 IPC: Whoever makes any gesture, or any preparation intended to cause any person to apprehend that he will commit an offence of violence upon him, or upon any other person in his presence, or upon any property in his possession, or under his charge, or in his sight, shall be said to assault that person.
-
-The essential elements of assault under Section 351 IPC are:
-
- There must be an act or gesture by the accused which causes the victim to apprehend that the accused will commit an offence of violence on him/her or on any other person in his/her presence or on any property in his/her possession or under his/her charge or in his/her sight.
- The victim must have a reasonable apprehension of violence.
- The accused must have the intention to cause the victim to apprehend violence.
-
-In the present case, the accused, Deepanshu, slapped the victim, Parth, on the face without any provocation. This act of Deepanshu caused Parth to apprehend that Deepanshu would commit an offence of violence on him. Parth's apprehension was reasonable because Deepanshu had already slapped him. Deepanshu also had the intention to cause Parth to apprehend violence because he slapped him without any provocation.
-
-Therefore, Deepanshu's act of slapping Parth on the face constitutes the offence of assault under Section 351 IPC.
-
-Punishment for Assault under Section 351 IPC
-
-Section 351 IPC is a bailable and cognizable offence. The punishment for assault under Section 351 IPC is imprisonment for a term which may extend to one year, or with fine, or with both.
-
-Procedure for Filing a Case of Assault
-
-To file a case of assault, the victim can either file a complaint with the police or directly file a first information report (FIR) with the magistrate. If the victim files a complaint with the police, the police will investigate the matter and file an FIR on the basis of the complaint. If the victim directly files an FIR with the magistrate, the magistrate will direct the police to investigate the matter.
-
-Once the FIR is filed, the police will investigate the matter and collect evidence. If the police find sufficient evidence against the accused, they will file a charge sheet against the accused in the court. The court will then hear the case and decide whether the accused is guilty or not guilty.
-
-If the accused is found guilty, the court will sentence him/her to the punishment prescribed for the offence.
-        </pre>
-    </div>
-    <!-- <div>
+    <div>
+        <button id="printButton">Print</button>
         <pre>
             {{ reply }}
         </pre>
-        
-    </div> -->
+        <img src="" alt="">
+
+    </div>
 </body>
+<script>
+    document.getElementById("printButton").addEventListener("click", function () {
+        // Handle the button click event here
+        window.print();
+    });
+
+    // Listen for the Ctrl+P keyboard shortcut
+    document.addEventListener("keydown", function (event) {
+        if (event.ctrlKey && event.key === "p") {
+            // Prevent the default browser print dialog
+            event.preventDefault();
+
+            // Trigger the button click event
+            document.getElementById("printButton").click();
+        }
+    });
+</script>
+
 </html>
