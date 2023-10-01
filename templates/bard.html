@@ -17,6 +17,7 @@
             flex-flow: column wrap;
             align-items: center;
             justify-content: center;
+            opacity: 1;
         }
 
         nav {
@@ -72,7 +73,7 @@
             font-size: 48px;
             margin-bottom: 10px;
         }
-        
+
         form {
             display: flex;
             flex-flow: column wrap;
@@ -107,7 +108,7 @@
             margin: 20px 80px;
             margin-left: 0;
         }
-        
+
         input[type="submit"] {
             cursor: pointer;
             width: 20%;
@@ -134,10 +135,10 @@
             justify-self: center;
             margin: 30px 0px;
         }
-        
-        
+
+
         @media (max-width: 768px) {
-            
+
             /* Make the navigation bar stack vertically */
             nav ul {
                 flex-flow: column wrap;
@@ -165,7 +166,48 @@
                 width: 100%;
             }
         }
-        </style>
+
+
+        #loading-container {
+            position: fixed;
+            top: 40%;
+            left: 40%;
+            text-align: center;
+            display: none;
+        }
+
+        .loading-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #f39c12;
+            animation: spin 1s infinite linear;
+        }
+
+        .loading-text {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -189,6 +231,10 @@
                 Female <input type="radio" name="gender" value="female">
             </div>
             <div>
+
+                Enter your Father's name:<input type="text" name="fname">
+            </div>
+            <div>
                 Enter your age:<input type="text" name="age" id="age">
             </div>
             <div>
@@ -197,6 +243,9 @@
             </div>
             <div>
                 Name of culprit:<input type="text" name="noc" value="Unknown">
+            </div>
+            <div>
+                Father's name of culprit:<input type="text" name="fnameoc" value="Unknown">
             </div>
             <div>
                 Relation with culprit:<input type="text" name="rwc" value="Unknown">
@@ -235,18 +284,29 @@
                 Enter your losses:<input type="text" name="loss" value="none">
             </div>
             <div>
-                Drop your sign here:<input type="file" accept="image/*" name="sign" value="" id="imageInput">
-            </div>
-            <div>
-                <input type="submit">
+                <input type="submit" id="submitted">
             </div>
         </form>
     </section>
+    <div id="loading-container">
+        <div class="loading-icon">↻</div>
+        <div class="loading-text">Generating Draft...</div>
+    </div>
+
+    <script>
+        let submit = document.querySelector('#submitted');
+        let loading = document.querySelector('#loading-container')
+        submit.addEventListener('click', () => {
+
+            // document.b.style.fliter = "blur(8px)"
+            loading.style.display = "flex"
+            loading.style.flexDirection = "column"
+
+        });
+
+
+    </script>
 
 </body>
 
 </html>
-
-
-
-

@@ -1,6 +1,382 @@
 <html>
 
 <head>
+    <title>Expert Consultation</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            height: 3500px;
+        }
+
+        #i-butt {
+            position: fixed;
+            top: 40px;
+            right: 40px;
+            height: 45px;
+            width: 45px;
+            border: 2px solid black;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 3;
+        }
+
+        #i-butt:hover {
+            transition: transform 0.2s ease-out;
+            transform: scale(1.3);
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        .body {
+            display: none;
+            transition: all 5s ease-in-out;
+            z-index: -1;
+            transform: translate();
+            margin-top: 140px;
+        }
+
+        aside {
+            position: fixed;
+            height: 60vh;
+            width: 30%;
+            top: 30%;
+            left: 40px;
+            transition: top 1s ease-in-out;
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            justify-content: space-evenly;
+            border: 2px solid black;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        aside p {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        aside select {
+            width: 200px;
+            height: 20px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        #main {
+            position: absolute;
+            height: 80vh;
+            width: 50%;
+            top: 200px;
+            right: 200px;
+            display: inline;
+            z-index: 0;
+            transition: top 1s ease-in-out;
+        }
+
+        .lawyer {
+            height: auto;
+            border: 2px solid black;
+            background-color: white;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0px;
+            padding: 30px 0px;
+            background: radial-gradient(white,
+                    white,
+                    #c4c2c2);
+        }
+
+        #main img {
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            border-radius: 50%;
+        }
+
+        #main span {
+            font-size: 25px;
+            font-weight: bold;
+            margin: 13px 0px;
+        }
+
+        #main p {
+            font-size: 18px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html"><img src="Screenshot (36).png" id="logo"></a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="contactus.html">contact us</a></li>
+        </ul>
+    </nav>
+
+    <img src="download.png" alt="" id="i-butt" onclick="toggleHide()">
+    <section class="body">
+        <h1>Here's a detailed explanation:</h1>
+        <p>The statement "Option for users to seek legal advice from an expert in case of complex legal issues" means
+            that within the "AI-powered Legal Documentation Assistant" project, there is a feature that allows users to
+            access and consult with a human legal expert when they encounter particularly intricate or challenging legal
+            matters. This feature acknowledges that while the AI system is a valuable tool, there are situations where
+            human expertise and judgment are indispensable.</p>
+        <p>
+            <b>Option for users to seek legal advice:</b>
+            This indicates that the system provides a pathway or a mechanism for users to connect with a qualified legal
+            professional. This could be in the form of a chat or consultation service where users can communicate
+            directly with a lawyer. <br>
+            <b>In case of complex legal issues:</b> <br>
+            This specifies that the option to seek legal advice is particularly intended for situations that involve
+            intricate, unclear, or legally challenging matters. It's recognizing that not all legal situations can be
+            resolved solely with automated document generation, and human expertise may be necessary.
+        </p>
+        <h2>Potential Enhancements:</h2>
+        <p>
+            <b>In-App Consultation Service:</b> <br>
+            Integrate a chat or video consultation feature directly within the application, allowing users to quickly
+            and conveniently connect with a legal expert without leaving the platform. <br>
+            <b>Expertise Matching:</b> <br>
+            Implement a system that matches users with legal experts based on the specific area of law relevant to their
+            issue. For example, if a user is dealing with a real estate matter, they would be connected with a real
+            estate law expert. <br>
+            <b>Appointment Scheduling:</b> <br>
+            Provide a scheduling tool that allows users to book consultations at a time that is convenient for both
+            parties.
+            <b>Document Upload and Review:</b> <br>
+            Allow users to upload their generated documents for review by the legal expert, ensuring that they meet all
+            necessary legal requirements and are appropriate for the specific situation. <br>
+            <b>Cost Transparency:</b> <br>
+        <p>Clearly outline any associated costs for seeking legal advice, including consultation fees or charges for
+            additional services.</p>
+        <h2>Feedback and Rating System:</h2>
+        <p>Implement a system that allows users to provide feedback on their consultation experience. This can help
+            maintain a high standard of service and provide valuable insights for improvements.</p>
+        <h2>Legal Resource Library:</h2>
+        <p>Include a repository of legal resources, articles, and guides within the application to offer users
+            additional information and context on common legal issues.</p> <br>
+        <p>By incorporating these enhancements, the "AI-powered Legal Documentation Assistant" can become a more
+            comprehensive and valuable tool for users, providing them with a complete legal solution that combines the
+            benefits of AI automation with the expertise of human legal professionals when needed.</p>
+        </p>
+
+    </section>
+
+    <aside>
+        <div>
+            <p>Choose type of case:</p>
+            <select id="case_type">
+                <option value="All" selected> All </option>
+                <option value="Criminal" > Criminal </option>
+                <option value="Registry"> Registry </option>
+                <option value="Matrimonial"> Matrimonial </option>
+                <option value="Defamation"> Defamation </option>
+                <option value="Nuisance"> Nuisance </option>
+            </select>
+        </div>
+        <div>
+            <p>Choose state:</p>
+            <select>
+                <option> UP </option>
+            </select>
+        </div>
+        <div>
+            <p>Choose district:</p>
+            <select id="district">
+                <option value="Meerut"> Meerut </option>
+                <option value="Saharanpur"> Saharanpur </option>
+                <option value="Gaziabad"> Gaziabad </option>
+                <option value="Amroha"> Amroha </option>
+                <option value="Varanasi"> Varanasi </option>
+                <option value="Fatehpur"> Fatehpur </option>
+                <option value="Baghpat"> Baghpat </option>
+                <option value="Agra"> Agra </option>
+            </select>
+        </div>
+    </aside>
+
+    <section id="main">
+        <div class="lawyer Criminal Meerut">
+            <img src="Images/RoopChandra.jpg" alt="">
+            <span>Mr. Roop Chandra Sharma</span>
+            <p>24 years in business</p>
+            <p>District Court, Chamber No.- 15, Naveen Bhawan, Meerut City, Meerut - 250002 (Near Western Kutchery Gate)
+            </p>
+            <p>Mon - Sat <br>
+                10:00 am - 5:00 pm <br>
+                Sun - Closed</p>
+            <span>07947354687</span>
+        </div>
+        <div class="lawyer Criminal Meerut">
+            <img src="Images/ShubhamArora.jpg" alt="">
+            <span>Adv. Shubham Arora</span>
+            <p>9 Years in Business</p>
+            <p>Chamber No. 47, First Floor, Ch. Charan Singh Law Chambers Building, Civil Court Compound, Meerut
+                Kutchery, Meerut - 250003 (Near Family Court)</p>
+            <p>Mon - Sat <br>
+                10:00 am - 6:00 pm <br>
+                Sun <br>
+                9:00 am - 9:00 pm</p>
+            <span>07947349943</span>
+        </div>
+        <div class="lawyer Criminal Meerut">
+            <img src="Images/MeenakshiYadav.jpg" alt="">
+            <span>Adv. MEENAKSHI YADAV</span>
+            <p>6 Years in Business</p>
+            <p>Chamber No. 83, Collectrate Compound, Meerut Kutchery, Meerut - 250003 (Near Post Office)</p>
+            <p>Mon - Sun <br>
+                Open 24 Hrs</p>
+            <span>07947290704</span>
+        </div>
+        <div class="lawyer Registry Gaziabad">
+            <img src="Images/LegalInsight.jpg" alt="">
+            <span>The Legal Insight</span>
+            <p>37 Years in Busines</p>
+            <p>Chamber No 899, District Sessions Court Raj Nagar District Centre, Raj Nagar Ghaziabad, Ghaziabad - 201002 (Near Hotel Mela Plaza)</p>
+            <p>Mon - Sun <br>
+                Open 24 Hrs</p>
+            <span>9716113377</span>
+        </div>
+        <div class="lawyer Registry Gaziabad">
+            <img src="Images/SPChaudhary.jpg" alt="">
+            <span>S P Chaudhary And Associates (advocates & Legal Advisors)</span>
+            <p>22 Years in Business</p>
+            <p>R - 9/56, Raj Nagar Ghaziabad, Ghaziabad - 201002 (Near St. Paul School)</p>
+            <p>Mon - Sat <br>
+                10:00 am - 6:00 pm <br>
+                Sun <br>
+                Closed - Closed</p>
+            <span>07419873669</span>
+        </div>
+        <div class="lawyer Registry Gaziabad">
+            <img src="Images/KumarAdvocate.jpg" alt="">
+            <span>Kumar Advocate & Associates</span>
+            <p>22 Years in Business</p>
+            <p>Chamber No.819, District Court Compound, Raj Nagar Ghaziabad, Ghaziabad - 201002 (Near Ssc Office)</p>
+            <p>Mon - Fri <br>
+                8:00 am - 7:00 pm <br>
+                Sat - Sun <br>
+                Closed - Closed</p>
+            <span>07419638252</span>
+        </div>
+        <div class="lawyer Matrimonial Meerut">
+            <img src="Images/BhupendraSingh.jpg" alt="">
+            <span>Adv. Bhupender Singh Rana</span>
+            <p>32 Years in Business</p>
+            <p>Chamber No. 20, Meerut College Road, Kutchery, Meerut - 250001 (Commissnary)</p>
+            <p>Mon - Sat <br>
+                10:00 am - 5:00 pm <br>
+                Sun <br>
+                Closed - Closed</p>
+            <span>06384437426</span>
+        </div>
+        <div class="lawyer Matrimonial Meerut">
+            <span>Shanti Legal Consultancy Services</span>
+            <p>1 Years in Business</p>
+            <p>5, Baral, Mheroli Road, Kanker Khera, Meerut - 250001 (Near Pani Ki Tanki)</p>
+            <p>Mon - Sat <br>
+                10:30 am - 4:00 pm <br>
+                Sun <br>
+                Closed - Closed</p>
+            <span>07947404569</span>
+        </div>
+    </section>
+
+    <script>
+
+        body1 = document.querySelector('.body');
+        aside = document.querySelector('aside');
+        main = document.querySelector('#main')
+        function toggleHide() {
+            if (aside.style.top != "1000px" && main.style.top != "1000px" && body1.style.display == "none") {
+                aside.style.top = "800px"
+                main.style.position = "fixed"
+                main.style.top = "800px"
+                body1.style.display = "block";
+
+            }
+            else {
+                aside.style.top = "30%"
+                main.style.position = "absolute"
+                main.style.top = "200px"
+                body1.style.display = "none";
+            }
+
+        }
+
+        var case_type = document.getElementById('case_type')
+        var lawyers = document.querySelectorAll('.lawyer')
+        var district = document.getElementById('district')
+
+        case_type.addEventListener('change', () => {
+            const selectedCase = case_type.value;
+
+            lawyers.forEach(lawyer => {
+                lawyer.style.display = 'none';
+            });
+            
+            const selectedLawyers = document.querySelectorAll(`.lawyer.${selectedCase}`);
+            selectedLawyers.forEach(lawyer => {
+                lawyer.style.display = 'flex';
+            });
+
+            if (selectedCase == "All"){
+                lawyers.forEach(lawyer => {
+                    lawyer.style.display = 'flex';
+                });
+            }
+
+        })
+        
+        // district.addEventListener('change', () => {
+        //     const selectedDistrict = district.value;
+
+        //     lawyers.forEach(lawyer => {
+        //         lawyer.style.display = 'none';
+        //     });
+            
+        //     const selectedLawyers = document.querySelectorAll(`.lawyer.${selectedDistrict}`);
+        //     selectedLawyers.forEach(lawyer => {
+        //         lawyer.style.display = 'flex';
+        //     });
+
+        // })
+
+
+    </script>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
+
+
+
+
+<!-- <html>
+
+<head>
     <title>LegalEaseAI</title>
     <link rel="stylesheet" href="style.css">
     <style>
@@ -240,17 +616,244 @@
 
     </script>
 
+</body> -->
+<!-- </html> -->
+<!-- <html>
+
+<head>
+    <title>LegalEaseAI</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        body{
+            height: 1200px;
+        }
+
+        #i-butt {
+            position: fixed;
+            top: 40px;
+            right: 40px;
+            height: 40px;
+            width: 40px;
+            border: 2px solid black;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 3;
+        }
+
+        #i-butt:hover {
+            transition: transform 0.2s ease-out;
+            transform: scale(1.4);
+        }
+
+        nav{
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        .body {
+            display: none;
+            transition: all 5s ease-in-out;
+            z-index: -1;
+            transform: translate();
+            margin-top: 140px;
+        }
+
+        aside{
+            position: fixed;
+            height: 60vh;
+            width: 30%;
+            top: 30%;
+            left: 40px;
+            transition: top 1s ease-in-out;
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            justify-content: space-evenly;
+            border: 2px solid black;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        aside p{
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        aside select{
+            width: 200px;
+            height: 20px;
+            margin: 10px ;
+            cursor: pointer;
+        }
+
+        #main{
+            position: absolute;
+            height: 80vh;
+            width: 50%;
+            top: 200px;
+            right: 200px;
+            display: inline;
+            z-index: 0;
+            transition: top 1s ease-in-out;
+        }
+        
+        .lawyer{
+            border: 2px solid black;
+            background-color: white;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0px;
+            padding: 30px 0px;
+            background: radial-gradient(
+                white,
+                white,
+                #c4c2c2
+            );
+        }
+
+        #main img{
+            height: 100px ;
+            width: 100px;
+            border: 2px solid black;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        #main span{
+            font-size: 25px;
+            font-weight: bold;
+            margin: 13px 0px;
+        }
+
+        #main p{
+            font-size: 18px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html"><img src="Screenshot (36).png" id="logo"></a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="contactus.html">contact us</a></li>
+        </ul>
+    </nav>
+
+    <img src="download.png" alt="" id="i-butt" onclick="toggleHide()">
+    <section class="body">
+        <h1>Here's a detailed explanation:</h1>
+        <p>The statement "Option for users to seek legal advice from an expert in case of complex legal issues" means
+            that within the "AI-powered Legal Documentation Assistant" project, there is a feature that allows users to
+            access and consult with a human legal expert when they encounter particularly intricate or challenging legal
+            matters. This feature acknowledges that while the AI system is a valuable tool, there are situations where
+            human expertise and judgment are indispensable.</p>
+        <p>
+            <b>Option for users to seek legal advice:</b>
+            This indicates that the system provides a pathway or a mechanism for users to connect with a qualified legal
+            professional. This could be in the form of a chat or consultation service where users can communicate
+            directly with a lawyer. <br>
+            <b>In case of complex legal issues:</b> <br>
+            This specifies that the option to seek legal advice is particularly intended for situations that involve
+            intricate, unclear, or legally challenging matters. It's recognizing that not all legal situations can be
+            resolved solely with automated document generation, and human expertise may be necessary.
+        </p>
+        <h2>Potential Enhancements:</h2>
+        <p>
+            <b>In-App Consultation Service:</b> <br>
+            Integrate a chat or video consultation feature directly within the application, allowing users to quickly
+            and conveniently connect with a legal expert without leaving the platform. <br>
+            <b>Expertise Matching:</b> <br>
+            Implement a system that matches users with legal experts based on the specific area of law relevant to their
+            issue. For example, if a user is dealing with a real estate matter, they would be connected with a real
+            estate law expert. <br>
+            <b>Appointment Scheduling:</b> <br>
+            Provide a scheduling tool that allows users to book consultations at a time that is convenient for both
+            parties.
+            <b>Document Upload and Review:</b> <br>
+            Allow users to upload their generated documents for review by the legal expert, ensuring that they meet all
+            necessary legal requirements and are appropriate for the specific situation. <br>
+            <b>Cost Transparency:</b> <br>
+        <p>Clearly outline any associated costs for seeking legal advice, including consultation fees or charges for
+            additional services.</p>
+        <h2>Feedback and Rating System:</h2>
+        <p>Implement a system that allows users to provide feedback on their consultation experience. This can help
+            maintain a high standard of service and provide valuable insights for improvements.</p>
+        <h2>Legal Resource Library:</h2>
+        <p>Include a repository of legal resources, articles, and guides within the application to offer users
+            additional information and context on common legal issues.</p> <br>
+        <p>By incorporating these enhancements, the "AI-powered Legal Documentation Assistant" can become a more
+            comprehensive and valuable tool for users, providing them with a complete legal solution that combines the
+            benefits of AI automation with the expertise of human legal professionals when needed.</p>
+        </p>
+
+    </section>
+
+    <aside>
+        <div>
+            <p>Choose section:</p>
+            <select>
+                <option value="Section-323"> Section-323 </option>
+            </select>
+        </div>
+        <div>
+            <p>Choose state:</p>
+            <select>
+                <option value="UP"> UP </option>
+            </select>
+        </div>
+        <div>
+            <p>Choose district:</p>
+            <select>
+                <option value="Meerut"> Meerut </option>
+            </select>
+        </div>
+    </aside>
+
+    <section id="main">
+        <div class="lawyer">
+            <img src="cutelady1.png" alt="">
+            <span>Lawyer 1</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At assumenda quia, totam unde alias error! Magnam voluptatibus similique eveniet placeat!</p>
+        </div>
+        <div class="lawyer">
+            <img src="cuteman.png" alt="">
+            <span>Lawyer 2</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At assumenda quia, totam unde alias error! Magnam voluptatibus similique eveniet placeat!</p>
+        </div>
+        <div class="lawyer">
+            <img src="cutelady2.png" alt="">
+            <span>Lawyer 3</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At assumenda quia, totam unde alias error! Magnam voluptatibus similique eveniet placeat!</p>
+        </div>
+    </section>
+
+    <script>
+
+        body1 = document.querySelector('.body');
+        aside =document.querySelector('aside');
+        main = document.querySelector('#main')
+        function toggleHide() {
+            if ( aside.style.top!= "1000px" && main.style.top!= "1000px" && body1.style.display == "none" ) {
+                aside.style.top = "800px"
+                main.style.position = "fixed"
+                main.style.top = "800px"
+                body1.style.display = "block";               
+            }
+            else {
+                aside.style.top = "30%"
+                main.style.position = "absolute"
+                main.style.top = "200px"
+                body1.style.display = "none";
+            }
+        }
+    </script>
 </body>
-
-
-
-
-
-
-
-
-
-
-
-
-</html>
+</html> -->

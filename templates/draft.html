@@ -6,22 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {
-            background-color: #a9a9a6;
-            /* background: url(./grain.jpg) no-repeat center center/contain;
-            opacity: 2;
-            filter: contrast(2); */
-        }
-
         div {
             display: flex;
             flex-flow: column wrap;
             justify-content: center;
-            align-items: center;
+            align-items: flex-end;
         }
 
         pre {
-            width: 80vw;
+            width: 90vw;
             white-space: pre-wrap;
             overflow: hidden;
             font-size: 16.5px;
@@ -29,13 +22,32 @@
         }
 
         button {
-            align-self: flex-end;
+            position: absolute;
+            top: 0;
+            right: 0;
             padding: 10px 40px;
             border-radius: 10px;
             background-color: black;
             color: white;
             cursor: pointer;
+            width: 200px;
+            margin: 5px;
         }
+
+        input {
+            position: absolute;
+            top: 44px;
+            right: 0;
+            padding: 10px 40px;
+            border-radius: 10px;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            width: 200px;
+            margin: 5px;
+        }
+
+
 
         @media print {
             #printButton {
@@ -49,18 +61,23 @@
 
     <div>
         <button id="printButton">Print</button>
-        <pre>
-            {{ reply }}
-        </pre>
-        <img src="" alt="">
+        <form action="/custom" method="get">
 
+            <!-- <button> Save as draft </button> -->
+            <input type="submit" value="Customize">
+        </form>
     </div>
+    <pre>
+            {{ reply }}
+    </pre>
+
 </body>
 <script>
     document.getElementById("printButton").addEventListener("click", function () {
         // Handle the button click event here
         window.print();
     });
+
 
     // Listen for the Ctrl+P keyboard shortcut
     document.addEventListener("keydown", function (event) {
@@ -72,6 +89,8 @@
             document.getElementById("printButton").click();
         }
     });
+
+
 </script>
 
 </html>

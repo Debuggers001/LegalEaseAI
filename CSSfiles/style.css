@@ -129,6 +129,7 @@ hr {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
 }
 
 #sec a {
@@ -137,9 +138,10 @@ hr {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    width: 22%;
+    /* width: 22%; */
+    width: 46%;
     margin: 10px 10px;
-    height: 280px;
+    height: 300px;
     /* width: 100%; */
     /* justify-content: center; */
     border: 1px solid black;

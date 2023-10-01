@@ -1,68 +1,80 @@
-@media only screen and (max-width: 1390px){
-    #sec a{
+@media only screen and (max-width: 1390px) {
+    #sec a {
         width: 44%;
     }
 }
 
-@media only screen and (max-width: 600px){
-    #first{
+@media only screen and (max-width: 700px) {
+    #first {
         height: 100vh;
     }
-    nav{
+
+    nav {
         position: absolute;
         top: 0;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.284);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.284);
     }
-    nav ul{
+
+    nav ul {
         justify-content: flex-end;
     }
-    nav ul li{
+
+    nav ul li {
         padding: 25px 18px;
     }
-    nav img{
+
+    nav img {
         height: 60px;
         width: 70px;
     }
-    hr{
+
+    hr {
         display: none;
     }
-    #sec a{
-        width: 80%;
+
+    #sec a {
+        width: 85%;
     }
+
     #first div h1 {
         font-size: 40px;
     }
-    #first div button{
+
+    #first div button {
         font-size: 16px;
     }
-    
+
     #first div h3 {
         font-size: 20px;
         font-weight: 400;
     }
 }
 
-@media only screen and (max-width:500px){
-    nav img{
+@media only screen and (max-width:500px) {
+    nav img {
         position: static;
     }
+
     nav {
         position: absolute;
         top: 50px;
         flex-flow: row wrap;
     }
+
     #first div {
         height: 40vh;
         justify-content: flex-end;
     }
-    #first div h1{
+
+    #first div h1 {
         font-size: 28px;
     }
 
-    #first div h3{
+    #first div h3 {
         font-size: 16px;
     }
-    #first div button{
+
+    #first div button {
         min-width: 80px;
     }
 }

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: wheat;
+            font-family: 'Arial Narrow Bold', sans-serif;
+        }
+
+        section {
+            margin-top: 100px;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: flex-start;
+            justify-content: space-evenly;
+            width: 100%;
+        }
+
+        div {
+            padding: 30px;
+            background-color: white;
+            border: 2px solid gray;
+            width: 70%;
+        }
+
+        form {
+            padding: 30px;
+            background-color: white;
+            border: 2px solid gray;
+            border-radius: 20px;
+            display: flex;
+            flex-flow: column wrap;
+            background-color: transparent;
+            border: none;
+            height: 60vh;
+            align-items: center;
+            justify-content: center;
+        }
+
+        input {
+            margin: 30px;
+            width: 120px;
+        }
+
+        input::-webkit-file-upload-button {
+            width: 120px;
+            content: 'Choose File';
+            display: inline-block;
+            background: #f1f1f1;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 5px 10px;
+            outline: none;
+            white-space: nowrap;
+            cursor: pointer;
+            padding: 15px 25px;
+            text-align: center;
+        }
+
+        input::-webkit-file-upload-button:hover {
+            border: 1px solid gray;
+        }
+
+        input[type="submit"] {
+            content: 'Upload';
+            display: inline-block;
+            background: #f1f1f1;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            padding: 5px 10px;
+            outline: none;
+            white-space: nowrap;
+            cursor: pointer;
+            padding: 15px 25px;
+        }
+
+        input[type="submit"]:hover {
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <form action="/simplify" method="POST">
+            <input type="file" name="pdfFile" accept=".pdf" value="Drop your legal document" class="custom-file-input">
+            <input type="submit" value="Upload">
+        </form>
+        <div>
+            {{ new }}
+        </div>
+    </section>
+</body>
+
+</html>
